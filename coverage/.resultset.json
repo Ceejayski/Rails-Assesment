@@ -1,0 +1,31 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/ceejayski/my-projects/rails-assesment-test/app/models/player.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/ceejayski/my-projects/rails-assesment-test/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1653591832
+  }
+}
