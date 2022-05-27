@@ -2,10 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :players
+      resources :players, except: %i[show]
     end
   end
-  get '*path', to: redirect('/'), constraints: lambda { |req|
-    req.path.exclude? 'rails/active_storage'
-  }, as: 'image_url'
 end
