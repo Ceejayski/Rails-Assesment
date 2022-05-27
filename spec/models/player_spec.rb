@@ -13,9 +13,9 @@ require 'rails_helper'
 
 RSpec.describe Player, type: :model do
   describe '#Validations' do
-    it{ should validate_presence_of(:last_name) }
-    it{ should validate_inclusion_of(:number).in_range(0..99) }
-    it { should validate_numericality_of(:number) }
+    it { should validate_presence_of(:last_name) }
+    it { should validate_numericality_of(:number).is_less_than_or_equal_to(99) }
+    it { should validate_numericality_of(:number).is_greater_than_or_equal_to(0) }
     it { is_expected.to validate_content_type_of(:image).rejecting('text/plain', 'text/xml') }
   end
 

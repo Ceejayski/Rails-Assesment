@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: players
@@ -9,11 +11,12 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
+include ActionDispatch::TestProcess
 FactoryBot.define do
   factory :player do
-    first_name { Faker::Name }
-    last_name { Faker::Name }
-    number { (0..99).to_a.sample }
-    # image { Faker::LoremPixel.image }
+    first_name { Faker::Name.name }
+    last_name { Faker::Name.name }
+    number { Faker::Number.between(from: 0, to: 99) }
+    image { Rack::Test::UploadedFile.new('spec/fixtures/sample.jpg', 'image/jpg') }
   end
 end

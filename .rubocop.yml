@@ -23,7 +23,7 @@ Metrics/MethodLength:
 
 Metrics/BlockLength:
   CountComments: false
-  Max: 11
+  Max: 15
   IgnoredMethods:
     - context
     - describe
