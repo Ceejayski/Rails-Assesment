@@ -14,6 +14,6 @@ FactoryBot.define do
     first_name { Faker::Name }
     last_name { Faker::Name }
     number { (0..99).to_a.sample }
-    image { Faker::LoremPixel.image }
+    # image { Faker::LoremPixel.image }
   end
 end
